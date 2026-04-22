@@ -22,10 +22,11 @@ else:
         
         print(f"first root: {-b / (2*a)} + sqrt({discrim}) / {(2*a)}")
         print(f"second root: {-b / (2*a)} - sqrt({discrim}) / {(2*a)}")
-        print(f"two real roots: {root1}, {root2}") #판별식 양수면 서로 다른 두 실근
         
         if not root1.is_integer() or not root2.is_integer(): #정수로 안나오면
             print("what the hell is this") #숫자가 뭐고 이게
+        else:
+            print(f"two real roots: {root1}, {root2}") #판별식 양수면 서로 다른 두 실근
     elif discrim == 0:
         root = -b / (2*a) #중근
         print(f"real multiple root: {root}") #판별식 0이면 중근
@@ -35,8 +36,8 @@ else:
         
         print(f"first root: {real_part} + sqrt({-discrim / (2*a)})i")
         print(f"second root: {real_part} - sqrt({-discrim / (2*a)})i")
-        print(f"two imaginary roots: {real_part} + {imag_part}i, {real_part} - {imag_part}i") #판별식 음수면 서로 다른 두 허근  
         
         if not real_part.is_integer() or not imag_part.is_integer(): #정수로 안나오면
             print("what the hell is this") #숫자가 드럽다
-    #분수로 표현 어케하지
+        else:
+            print(f"two imaginary roots: {real_part} + {imag_part}i, {real_part} - {imag_part}i") #판별식 음수면 서로 다른 두 허근
