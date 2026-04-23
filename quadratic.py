@@ -1,10 +1,10 @@
 import math
 
-def getNumber(prmpt): #숫자 입력
+def getNumber(number): #숫자 입력
     while True: #숫자 입력할때까지 반복
         try:
-            return float(input(prmpt)) #입력값 유리수 변환(유리수 맞나 암튼 까먹음)
-        except ValueError: #오류나면
+            return float(input(number)) #입력값 유리수 변환(유리수 맞나 암튼 까먹음)
+        except ValueError: #오류나면(숫자 아니면)
             print("insert a number") #숫자 아니면 경고
 
 print("ax^2 + bx + c = 0")
