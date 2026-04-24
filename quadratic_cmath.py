@@ -4,7 +4,7 @@ import math
 def getNumber(number): #숫자 입력
     while True: #숫자 입력할때까지 반복
         try:
-            return float(eval(input(number))) #입력값 유리수 변환(유리수 맞나 암튼 까먹음)
+            return complex(eval(input(number))) #입력값 유리수 변환(유리수 맞나 암튼 까먹음)
         except (ValueError, NameError): #오류나면(숫자 아니면)
             print("insert a number") #숫자 아니면 경고
 
