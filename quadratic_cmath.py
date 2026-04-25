@@ -1,12 +1,12 @@
-import ast
+import ast #for great eval
 import cmath #for sqrt and imaginary numbers
 
 def getNumber(prompt): #getting a number
     while True:
         try:
-            return complex(ast.literal_eval(input(prompt))) #allows user to input sqrt or imaginary numbers, which is very very good good
+            return complex(ast.literal_eval(input(prompt))) #can input sqrt or imaginary numbers, which is very very good good
         except Exception: #if sth happens
-            print("error: wtf u did that for?") #you sob, you broke the program
+            print("error: wtf u did that for?") #you broke the program lol
 
 def is_integer(z): #is it integer
     return z.imag == 0 and z.real == int(z.real) #yup or nope
@@ -22,7 +22,7 @@ if a == 0:
 else:
     discrim = b**2 - 4*a*c #discrimination
     sqrt_discrim = cmath.sqrt(discrim) #sqrt
-    divisor = 2*a #i dont think it is necessary. why tf i made this
+    divisor = 2*a #i dont think it is necessary. why i made this
     
     if discrim == 0: #multiple root
         root = -b / divisor
@@ -35,6 +35,6 @@ else:
         print(f"second root: {-b / divisor} - sqrt({discrim}) / {divisor}")
         
         if is_integer(root1) and is_integer(root2):
-            print(f"two real roots: {int(root1.real)}, {int(root2.real)}") #if they are integers, print them.
+            print(f"two real roots: {int(root1.real)}, {int(root2.real)}") #if they are integers
         else:
-            print(f"roots: {root1}, {root2}") #otherwise, print them as they are, such as complex numbers or imaginary numbers
+            print(f"roots: {root1}, {root2}") #otherwise
