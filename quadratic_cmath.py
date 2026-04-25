@@ -1,10 +1,9 @@
-import ast #for great eval
 import cmath #for sqrt and imaginary numbers
 
 def getNumber(prompt): #getting a number
     while True:
         try:
-            return complex(ast.literal_eval(input(prompt))) #can input sqrt or imaginary numbers, which is very very good good
+            return complex(eval(input(prompt), globals())) #can input sqrt or imaginary numbers, which is very very good good
         except Exception: #if sth happens
             print("error: wtf u did that for?") #you broke the program lol
 
